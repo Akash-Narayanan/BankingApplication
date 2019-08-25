@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Validation</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <style>            
+            td{
+                padding: 10px;
+            }
+            div{
+                width: 30%;
+                border: 1px solid black;
+                border-radius: 5px;
+                background-color: lightseagreen;
+                margin-top: 200px;
+            }
+        </style>
+        <script type="text/javascript">
+            function reveal_pass(){
+            var textbox_elem = document.getElementById("password");
+            if (textbox_elem.type === "password") {
+                textbox_elem.type = "text";
+            }
+            else {
+                textbox_elem.type = "password";
+            }
+            }
+        </script>
+    </head>
+    <body>
+    <center>
+        <div align="center">
+            <form action="login" method="post">
+                <table>
+                    <tr>
+                        <td>UserName:</td>
+                        <td><input type="text" class="form-control" size="18" maxlength=15 name="username"  value=""></td>
+                    </tr>
+                    <tr>
+                        <td>PassWord:</td>
+                        <td>
+                            <input type="password" class="form-control" size="18" maxlength=15 name="password" id="password" />
+                            <input type="checkbox" onchange="reveal_pass(); "> Show Password
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email-Id:</td>
+                        <td>
+                            <input type="email" class="form-control"   name="mailid" value=""/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center">
+                            <input type="submit" class="btn btn-success" name="submission" value="login">
+                            <input type="submit" class="btn btn-success" name="loggedin" value="signup">
+                        </td>
+                    </tr> 
+                </table>
+        </form>
+        </div>
+    </center>
+    </body>
+</html>

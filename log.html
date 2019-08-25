@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <style>            
+            td{
+                padding: 10px;
+            }
+            div{
+                width: 30%;
+                border: 1px solid black;
+                border-radius: 5px;
+                background-color: lightseagreen;
+                margin-top: 200px;
+            }
+        </style>
+        <script type="text/javascript">
+            function reveal_password(){
+            var textbox_element = document.getElementById("password");
+            if (textbox_element.type === "password") {
+                textbox_element.type = "text";
+            }
+            else {
+                textbox_element.type = "password";
+            }
+            }
+        </script>
+    </head>
+    <body>
+    <center>
+        <div align="center">
+            <form action="login" method="post">
+                <table>
+                    <tr>
+                        <td>UserName:</td>
+                        <td><input type="text" class="form-control" size="18" maxlength=15 name="logusername"  value=""></td>
+                    </tr>
+                    <tr>
+                        <td>PassWord:</td>
+                        <td>
+                            <input type="password" class="form-control" size="18" maxlength=25 name="logpassword" id="password" />
+                            <input type="checkbox" onchange="reveal_password(); "> Show Password
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <input type="submit" class="btn btn-success" name="login" value="loggin">
+                        </td>
+                    </tr> 
+                </table>
+        </form>
+        </div>
+    </center>
+    </body>
+</html>
